@@ -1,29 +1,33 @@
 import Chart from 'chart.js/auto';
 
 
-// window.onload = getData();
+var getlabels = [];
+var getvalues = [];
 
 
 const getData = async () => {
 
-   const response = await fetch('https://canvasjs.com/services/data/datapoints.php');
-    const data = await response.json();
+    const response = await fetch('https://canvasjs.com/services/data/datapoints.php');
+     const data = await response.json();
 
-    return data; 
+    return data;
+
+ 
+ var checkArr = (await getData());
+ 
+
+ 
+return checkArr; 
+
 
 };
 
-var dataArr = ( await getData());
 
-// getData().then((data) => { 
 
-// return data;
-   
-// }
-// );
- 
-var getlabels = [];
-var getvalues = [];
+var dataArr = getData();
+
+
+
 
 for (let i = 0; i < dataArr.length; i++) {
     getlabels.push(dataArr[i][0])
@@ -31,14 +35,9 @@ for (let i = 0; i < dataArr.length; i++) {
 
 }
 
-
-
-
-console.log(getlabels);
-console.log(getvalues);
-
-
-
+ console.log(getlabels);
+ console.log(getvalues);
+ 
 
 //put into html 
 
@@ -59,17 +58,13 @@ container3.setAttribute('style', 'position: relative; height: 50vh; width: 45vw,
       getContainer3.append(newCanvas3);
 
 
-// chart config
-
 
  let  tdchart3 = document.getElementById('realTime').getContext('2d');
 
  let  ArrChart3 = new Chart(tdchart3, {
     type: 'bar', 
     data: {
-
         labels: getlabels,
-      // would be nice  have a function here instead of hardcoding
 
     datasets: [{
         label: 'shitbutt',

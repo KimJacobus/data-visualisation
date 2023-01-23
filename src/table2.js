@@ -1,14 +1,6 @@
 import Chart from 'chart.js/auto';
 
 
-// fetch('https://canvasjs.com/services/data/datapoints.php').then((response) =>  {
-//     console.log("check");
-// }).catch((err) => {});
-
-
-//get data
-
-// table 2
 
 var countries2 = {}
 
@@ -105,10 +97,8 @@ var miniTitle2 = table2.getElementsByTagName('caption')[0];
     },
 
 
-   // can't seem to get options to work ? need to install plugins ? 
     data: {
        labels:countryNames2,
-      // would be nice to have a function here instead of hardcoding
     datasets: [{
        label:'2007-09',
        data: yearHomicide2007,
