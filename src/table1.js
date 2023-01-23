@@ -20,16 +20,15 @@ var countryNames = Object.values(countries).map(country => country.shift());
 
 // get years
 
-console.log(countries);
-console.log(countries['tr-2']);
 
 
 function getYears(index) {
 
-var var2 = countries[`tr-${index}`].join('/').replaceAll(',', '.').split("/");
+let year = countries[`tr-${index}`].join('/').replaceAll(',', '.').split("/");
 
-return var2; 
+return year; 
 }
+
 
 var Years0 = getYears(2)
 var Years1 = getYears(3)
@@ -67,7 +66,6 @@ var Years32 = getYears(34)
 var Years33 = getYears(35)
 var Years34 = getYears(36)
 
-console.log(Years34);
 
 
 //put into html 
@@ -92,6 +90,7 @@ container.setAttribute('style', 'position: relative; height:40vh; width:45vw');
 
 var miniTitle = table1.getElementsByTagName('caption')[0];
 miniTitle.remove();
+
 
 
 
@@ -129,7 +128,8 @@ miniTitle.remove();
       // would be nice to have a function here instead of hardcoding
 
     datasets: [{
-       label:countryNames[0],
+      
+       label: countryNames[0],
        data: Years0,
        hidden: false
     }, {
@@ -276,9 +276,19 @@ miniTitle.remove();
       label:countryNames[34],
       data: Years34,
       hidden: true
-      },
+      
      
-    ]},
+    }],
 
-});
+}});
 
+
+// console.log(countryNames[0]);
+// console.log(ArrChart.data.datasets[1].label);
+
+// for (let i = 0; i < countryNames.length; i++) {
+
+//   ArrChart.data.datasets[i].label = countryNames[i];
+//   ArrChart.data.datasets[i].data = getYears(i);
+// ArrChart.update();
+// }
