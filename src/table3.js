@@ -91,19 +91,20 @@ container3.setAttribute('style', 'position: relative; height: 40vh; width: 45vw,
         labels: getlabels,
 
     datasets: [{
-        label: 'shitbutt',
-        data: getvalues
+        label: 'Crime statistics',
+        data: getvalues,
+        position: 'bottom'
 
     }]
 },
 });
 
 
-// setInterval(function CallChart(){
-//     getData();
-//     ArrChart3.data.datasets.data = getvalues;
-//     ArrChart3.data.labels = getlabels;
-//     ArrChart3.update('none');
-//     CallData();
-// }, 1000);
+setInterval(function CallChart(){
+    getData();
+    ArrChart3.data.datasets.data = getvalues;
+    ArrChart3.data.labels = getlabels;
+    ArrChart3.update('none');
+    CallData();
+}, 1000);
 
