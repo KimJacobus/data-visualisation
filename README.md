@@ -5,6 +5,9 @@
 https://kimjacobus.github.io/data-visualisation/
 
 
+### note : 
+
+- turned off animation on first chart, check console for update per second. 
 
 
 ### tech used : 

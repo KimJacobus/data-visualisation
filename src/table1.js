@@ -16,11 +16,13 @@ for (let trindex = 2; trindex < 37; trindex++) {
       countries[`tr-${trindex}`] = getinnerHTML;
 }
 
-let countryNames = Object.values(countries).map(country => country.shift());
-
-
+var countryNames = Object.values(countries).map(country => country.shift());
 
 // get years
+
+console.log(countries);
+console.log(countries['tr-2']);
+
 
 function getYears() {
 
@@ -30,17 +32,17 @@ var var2 = var1.join('/').replaceAll(',', '.').split("/");
 return var2; 
 }
 
-var year2002 = getYears();
-var year2003 = getYears();
-var year2004 = getYears();
-var year2005 = getYears();
-var year2006 = getYears();
-var year2007 = getYears();
-var year2008 = getYears();
-var year2009 = getYears();
-var year2010 = getYears();
-var year2011 = getYears();
-var year2012 = getYears();
+// var year2002 = getYears();
+// var year2003 = getYears();
+// var year2004 = getYears();
+// var year2005 = getYears();
+// var year2006 = getYears();
+// var year2007 = getYears();
+// var year2008 = getYears();
+// var year2009 = getYears();
+// var year2010 = getYears();
+// var year2011 = getYears();
+// var year2012 = getYears();
 
 
 
@@ -103,54 +105,54 @@ miniTitle.remove();
       // would be nice to have a function here instead of hardcoding
 
     datasets: [{
-       label:'2002',
-       data: year2002,
+       label:countryNames[0],
+       data: ,
     }, {
-       label:'2003',
+       label:countryNames[1],
        data: year2003,
        hidden: true
     }, {
-      label:'2004',
+      label:countryNames[2],
       data: year2004,
       hidden: true
 
       }, {
-      label:'2005',
+      label:countryNames[3],
       data: year2005,
       hidden: true
 
       }, {
-      label:'2006',
+      label:countryNames[4],
       data: year2006,
       hidden: true
 
       }, {
-      label:'2007',
+      label:countryNames[5],
       data: year2007,
       hidden: true
 
       }, {
-      label:'2008',
+      label:countryNames[6],
       data: year2008,
       hidden: true
 
       }, {
-      label:'2009',
+      label:countryNames[7],
       data: year2009,
       hidden: true
 
       }, {
-      label:'2010',
+      label:countryNames[8],
       data: year2010,
       hidden: true
 
       }, {
-      label:'2011',
+      label:countryNames[9],
       data: year2011,
       hidden: true
 
       }, {
-      label:'2012',
+      label:countryNames[10],
       data: year2012,
       hidden: false
 

@@ -91,9 +91,6 @@ var miniTitle2 = table2.getElementsByTagName('caption')[0];
       }
     }
   }
-
-
-
     },
 
 
